@@ -4,7 +4,7 @@ import '../pages/main_page.dart';
 import '../pages/second_page.dart';
 import '../pages/third_page.dart';
 
-class RoutesManager {
+class RouteManager {
   static const String homePage = '/';
   static const String secondPage = '/secondPage';
   static const String thirdPage = '/thirdPage';
@@ -13,18 +13,18 @@ class RoutesManager {
     switch (settings.name) {
       case homePage:
         return MaterialPageRoute(
-          builder: (context) => MainPage(),
+          builder: (context) => const MainPage(),
         );
       case secondPage:
         return MaterialPageRoute(
-          builder: (context) => SecondPage(),
+          builder: (context) => const SecondPage(),
         );
       case thirdPage:
         return MaterialPageRoute(
-          builder: (context) => ThirdPage(),
+          builder: (context) => const ThirdPage(),
         );
       default:
-        throw FormatException('Route not found, Check routes.');
+        throw const FormatException('Route not found, Check routes.');
     }
   }
 }
